@@ -2,7 +2,7 @@ from typing import List
 
 
 class Video:
-    def __int__(self,id,url_video,url_foto,titulo,descricao,qtd_curtida,qtd_visualizacao,data_pub):
+    def __int__(self,id:int,url_video:str,url_foto:str,titulo:str,descricao:str,qtd_curtida:int,qtd_visualizacao:int,data_pub:str):
         self.__id = id
         self.__url_video = url_video
         self.__url_foto = url_foto
@@ -13,7 +13,7 @@ class Video:
         self.__data_pub = data_pub
 
 class Categoria:
-    def __int__(self,id,titulo,descricao,foto,videos:List):
+    def __int__(self,id:int,titulo:str,descricao:str,foto:str,videos:List):
         self.__id = id
         self.__titulo = titulo
         self.__descricao = descricao
