@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from trabalho01 import views
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('video/', views.listar_videos,name="home"),
+    path('video/<int:id>/', views.ver_video,name="video")
 ]
