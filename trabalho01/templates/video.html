@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video {{ video.get_id }}</title>
+    <h1>{{ video.get_titulo }}</h1>
+    <video controls autoplay>
+        <source src="{{ video.get_url_video }}" type="video/mp4">
+    </video>
+    <p>{{ video.get_descricao }} - lançamento: {{video.get_data_pub}}</p>
+    <p>Vizualizações: {{ video.get_qtd_visualizacao }}</p>
+    <button>Curtir -> {{ video.get_qtd_curtida }}</button>
+    <br><br>
+    <form>
+        <label>Escreva um Comentário:</label>
+        <br><br>
+        <textarea></textarea>
+        <br><br>
+        <input type="submit" value="Comentar">
+    </form>
+
+</head>
+<body>
+
+</body>
+</html>

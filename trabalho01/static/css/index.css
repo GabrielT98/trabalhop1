@@ -1,0 +1,9 @@
+a {
+    text-decoration: none;
+}
+a:hover{
+    color: gray;
+}
+h1{
+    text-align: center;
+}

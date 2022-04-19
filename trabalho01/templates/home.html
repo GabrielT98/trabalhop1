@@ -1,9 +1,29 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <title>teste</title>
-    {{ categorias }}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <title>WebTheater</title>
+    <h1>WebTheater</h1>
+    {% for categoria in categorias %}
+        <div>
+        <h2>{{ categoria.get_titulo }}</h2>
+        <img src="{% static 'img/' %}{{categoria.get_foto}}">
+        <p></p>
+
+            {% for video in categoria.get_videos %}
+                <div>
+                    <a href="{%url 'video' video.get_id%}">{{ video.get_titulo }}</a>
+
+
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
 </head>
 <body>
 
